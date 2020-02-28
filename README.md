@@ -1,6 +1,6 @@
-# LABORATORIO AREP - 04
+# LABORATORIO AREP - 05
 
-En este repositorio se realiza un servidor web (tipo Apache) en Java, que soporta múltiples solicitudes seguidas (no concurrentes). El servidor debe ser capaz de entregar páginas html e imágenes tipo PNG, Igualmente el servidor debe proveer un framework IoC para la construcción de aplicaciones web a partir de POJOS, utilizando los Sockts desde el servidor.
+En este repositorio se realiza un servidor web (tipo Apache) en Java, que soporta múltiples solicitudes seguidas concurrentes. El servidor debe ser capaz de entregar páginas html e imágenes tipo jpg, Igualmente el servidor debe proveer un framework IoC para la construcción de aplicaciones web a partir de POJOS, utilizando los Sockts desde el servidor.
 
 ## Link Heroku
 
