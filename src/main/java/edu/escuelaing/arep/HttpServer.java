@@ -60,13 +60,15 @@ public class HttpServer implements Runnable{
 								imagen("/src/main/Resource/"+palabra2[0],clientSocket.getOutputStream(),out);
 							}
 							else if(palabra2[0].contains(".html")) {
-								leenos("/src/main/Resource/"+palabra2[0],out);
+								leenos("/src/main/Resource/"+palabra2[0],clientSocket.getOutputStream(),out);
 							}
 							else if(palabra2[0].contains(".js")){
-								leenos("/src/main/Resource/"+palabra2[0],out);
+								leenos("/src/main/Resource/"+palabra2[0],clientSocket.getOutputStream(),out);
 							}
-							else{
-								leenos("/src/main/Resource/Perdido.html",out);
+							else {
+								out.println("HTTP/1.1 404 Not Found \r\nContent-Type: text/html \r\n\r\n <!DOCTYPE html> <html>"
+					                    + "<head><title>404</title></head>" + "<body> <h1>404 Not Found " 
+					                    + "</h1></body></html>");
 							}
 						}
 					}
@@ -115,21 +117,20 @@ public class HttpServer implements Runnable{
 	 * @param pag
 	 * @param out
 	 */
-	public static void leenos(String pag, PrintWriter out) {
-		BufferedReader intermedio;
+	public static void leenos(String pag,OutputStream clientOutput, PrintWriter out) {
 		try {
-			intermedio= new BufferedReader (new FileReader(System.getProperty("user.dir")+pag));
-			String text_linea="";
-			out.println("HTTP/1.1 200 OK \r\n\\r\\n");
-			while(text_linea!= null) {
-				text_linea = intermedio.readLine();
-				System.out.println(text_linea);
-				out.println(text_linea);
-			}
-		} catch (IOException e) {
-			System.out.println("Mira si el archivo se encuentra en su sitio porque yo no lo veo");
-			e.printStackTrace();
-		}
+            String text = "";
+            String temp;
+            BufferedReader t = new BufferedReader(new FileReader(System.getProperty("user.dir") + pag));
+            while ((temp = t.readLine()) != null) {
+                text = text + temp;
+            }
+            clientOutput.write(("HTTP/1.1 201 Found  \r\n"
+                    + "Content-Type: text/html; charset=\"utf-8\" \r\n"
+                    + "\r\n"
+                    + text).getBytes());
+        } catch (IOException e) {
+        } 
 	}
 
 
