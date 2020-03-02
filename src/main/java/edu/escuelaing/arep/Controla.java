@@ -9,7 +9,11 @@ import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SocketHandler;
-
+/**
+ * 
+ * @author sergio.nunez
+ *
+ */
 
 public class Controla {
 

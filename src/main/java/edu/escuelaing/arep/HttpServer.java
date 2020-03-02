@@ -93,6 +93,7 @@ public class HttpServer implements Runnable{
 	 * @param out
 	 * @throws IOException
 	 */
+	@Web("/imagen")
 	private static void imagen(String element, OutputStream clientOutput, PrintWriter out) throws IOException {
 		try {
 			BufferedImage image = ImageIO.read(new File(System.getProperty("user.dir") + element));
@@ -117,6 +118,7 @@ public class HttpServer implements Runnable{
 	 * @param pag
 	 * @param out
 	 */
+	@Web("/html")
 	public static void leenos(String pag,OutputStream clientOutput, PrintWriter out) {
 		try {
             String text = "";
