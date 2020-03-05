@@ -8,7 +8,7 @@ En este link se encuentra el desarrollo del trabajo desplegado en Heroku
 
 JPG EJEMPLO:
 
-- https://arep-lab-04.herokuapp.com/carro.jpg
+- https://lab-arep-05.herokuapp.com/carro.jpg
 
 Como se puede ver en esta imagen:
 
