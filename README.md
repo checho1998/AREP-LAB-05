@@ -6,12 +6,24 @@ En este repositorio se realiza un servidor web (tipo Apache) en Java, que soport
 
 En este link se encuentra el desarrollo del trabajo desplegado en Heroku
 
+JPG EJEMPLO:
+
 - https://arep-lab-04.herokuapp.com/carro.jpg
 
 Como se puede ver en esta imagen:
 
-![Imagenes](https://github.com/checho1998/AREP-LAB-04/blob/master/imagenes/Carro.PNG)
+![Imagenes](https://github.com/checho1998/AREP-LAB-05/blob/master/imagenes/Carro.PNG)
 
+ HTML EJEMPLOS:
+ 
+- https://lab-arep-05.herokuapp.com/Perdido.html
+- https://lab-arep-05.herokuapp.com/bienvenido.html
+
+Como se puede ver en estas imagenes:
+
+![Imagenes](https://github.com/checho1998/AREP-LAB-05/blob/master/imagenes/perdido.PNG)
+
+![Imagenes](https://github.com/checho1998/AREP-LAB-05/blob/master/imagenes/bienvenido.PNG)
 
 ## Como Instalar y Correr el Codigo
 
