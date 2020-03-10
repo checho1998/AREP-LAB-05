@@ -50,9 +50,6 @@ public class Controla {
 				Logger.getLogger(HttpServer.class.getName()).log(Level.SEVERE, null, ex);
 			}
 		}
-
-		//ap.inicie();   
-		//pool.submit(ap);
 	}
 
 	/**
